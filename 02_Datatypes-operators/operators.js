@@ -1,61 +1,58 @@
-// let x = 'Hello '
-// let y = 'World'
+// let  x = "Hello ";
+// let y = "World";
+// console.log(x+y);
 
-// console.log(x+y)
+// let z = 3;
+// console.log(x +z);
 
+// let a = 10;
 
-// z = 3;
+// // console.log(a++);
+// // console.log({a});
+// // console.log('a = ',a);
 
-// console.log(x + z);
+// let b = 8;
 
+// console.log(b = a++)
+// console.log({a},{b})
 
-/* let a = 10;
+/* let x = 5, y = "5";
+// console.log(x = y); // atama operatörü string 5 olarak atandı.
+// console.log(x == y); //true
+// console.log(x === y); //false
 
-// console.log(a++)
-// console.log({a})
-// console.log('a = ',a)
+let z = x != y;
 
-let b = 8;
+let zz = x !== y;
+console.log(z);
+console.log(zz);
+console.log(!false); */
 
+//! Logical Operators
 
-console.log(b = a++)
+// and -- &&
+// or -- ||
+// Not -- !
 
-console.log({a},{b})
- */
+// ----------------------------------
 
+/* console.log(Boolean(null)); //false
+console.log(null == false); // false
+console.log(null == true); // false
+console.log(null == null); // true
 
-// let x = 5, y='5';
+console.log(NaN == NaN) // false
 
-// // console.log(x == y) //true
-// // console.log(x === y) //false
+let a,b;
+console.log(a == b); // true */
 
-// let z = x != y;
+//! Nullish(??)
 
-// let zz = x !== y;
-
-// console.log(z);
-// console.log(zz);
-
-// console.log(!false)
-
-
-// console.log(Boolean(null))
-
-// console.log(null == false);
-// console.log(null == true);
-// console.log(null == null)
-// console.log(NaN == NaN)
-// let a,b;
-// console.log(a == b)
-
-
-/* let d;
-let e = 'Hello World'
-console.log(d ?? e)
-console.log(e ?? d)
+let d;
+let e = "Hello World";
+console.log(d ?? e);
+console.log(e ?? d);
 
 let f = null;
-
-console.log(f ?? d)
-
-console.log(d ?? 0) */
+console.log(f ?? d);
+console.log(d ?? 0);
