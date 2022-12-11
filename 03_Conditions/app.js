@@ -71,13 +71,40 @@
 // };
 
 
-// ! ternary examples
+// ! ternary examples 3
 // console.log('----------\nternary if statements\n----------');
 
 // program to check pass or fail
 // let grade = prompt('Enter your score :');
+// let result = grade >= 50 ? "pass" : "fail";
+// console.log(`You ${result} the exam`)
+
+// const age = 18;
+// let result;
+// if (age >= 18) {
+//   result = 'You are eligible to vote.';
+// } else {
+//   result = 'You are not eligible to vote yet.';
+// }
+// console.log(result);
+
+// const result =
+//   age >= 18 ? 'You are eligible to vote.' : 'You are not eligible to vote yet';
+// console.log(result);
+
+// if (n1 > 0) {
+//   console.log(`${n1} is positive`);
+// } else if (n1 < 0) {
+//   console.log(`${n1} is negative`);
+// } else {
+//   console.log(`the number is  0`);
+// }
 
 // ! evde denemeyiniz !!
+// const n1 = 0;
+// const result = n1 >= 0 ? (n1 == 0 ? 'zero' : `${n1} is positive`) : 'negative';
+// console.log(result);
+// ! evde denemeyiniz !! //? ternary operatörünü nested olarak kullanmak uygun değil.
 
 // ! example-4 canDrive
 
