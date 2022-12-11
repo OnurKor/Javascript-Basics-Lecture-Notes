@@ -10,13 +10,56 @@ console.log('****** LOOPS *******');
 // Math.round() => değerine göre yuvarlar.
 // Math.trunc() => kesirli sayının tam kısmı alır.
 
-
-
+/* for (let i = 1; i <= 10; i++) {
+    const randomNumber = Math.floor(Math.random() * 100 + 1);
+    console.log(randomNumber);
+    
+};
+console.log("Program bitti"); */
 
 //? Ornek: 1 den n kadar sayıları toplayan kodu yazınız.
 
+/* const n = +prompt("n sayısını giriniz:");
+let toplam = 0;
+
+for(let i = 1; i <= n; i++){
+    
+    toplam += i;
+}
+console.log("Toplam:", toplam); */
 
 // //? ÖRNEK: Dışarıdan girilen sayının Asal olup olmadığını tespit ederek sonucu yazdıran programı yazınız.
+
+// const number = +prompt("Enter a positive number: ");
+// let isPrime = true;
+
+// // check if number is equal to 1
+// if (number === 1) {
+//     console.log("1 is neither prime nor composite number.");
+// }
+
+// // check if number is greater than 1
+// else if (number > 1) {
+
+//     // looping through 2 to number-1
+//     for (let i = 2; i < number; i++) {
+//         if (number % i == 0) {
+//             isPrime = false;
+//             break;
+//         }
+//     }
+
+//     if (isPrime) {
+//         console.log(`${number} is a prime number`);
+//     } else {
+//         console.log(`${number} is a not prime number`);
+//     }
+// }
+// // check if number is less than 1
+// else {
+//     console.log("The number is not a prime number.");
+// };
+
 
 // //******************** WHILE ******************
 
