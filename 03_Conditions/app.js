@@ -2,6 +2,24 @@
 // ! if statement example
 // check if the is positive
 
+// const n1 = +prompt("Enter a number:");
+// console.log(n1, typeof n1);3
+
+// if(n1 > 0) {
+//   console.log(`${n1} is positive`);
+// } else console.log(`the number is either 0 or negative`);
+
+
+// const n1 = +prompt("Enter a number:");
+// console.log(n1, typeof n1);3
+
+// if (n1 > 0) {
+//   console.log(`${n1} is positive`);
+// } else if (n1 < 0) {
+//   console.log(`${n1} is negative`);
+// } else {
+//   console.log(`the number is 0`)
+// };
 
 
 // ! example 2 chest size
@@ -10,14 +28,47 @@
 
 // suggest size for men as XS S M L XL XXL on chest size
 
+// const chest = +prompt("Enter your chest size:");
+
+// if (chest < 32) {
+//   console.log("There is no size fit for you");
+// } else if (chest < 35){
+//   console.log("Your size: XS");
+// } else if (chest < 38){
+//   console.log("Your size: S");
+// } else if (chest < 40){
+//   console.log("Your size: M");
+// } else if (chest < 44){
+//   console.log("Your size: L");
+// } else if (chest < 47){
+//   console.log("Your size: XL");
+// } else if (chest < 50){
+//   console.log("Your size: XXL");
+// } else{
+//   console.log("There is no size fit for you");
+// };
+
 
 
 // ! example 2 three number comparison
 
 // Write a JavaScript program that accept three integers and display the greatest.
-
 // n1 is the greatest among n2 and n3
-// 8 is the g     among 3 and 5
+// 8 is the greatest among 3 and 5
+
+// const n1 = +prompt("Enter a number:");
+// const n2 = +prompt("Enter a number:");;
+// const n3 = +prompt("Enter a number:");;
+
+// if (n1 > n2 && n1 > n3) {
+//   console.log(`${n1} is the greatest among ${n2} and ${n3}`);
+// } else if (n2 > n3 && n2 > n1) {
+//   console.log(`${n2} is the greatest among ${n1} and ${n3}`);
+// } else if (n3 > n1 && n3 > n2) {
+//   console.log(`${n3} is the greatest among ${n1} and ${n2}`);
+// } else {
+//   alert("Again enter a number because equal number" );
+// };
 
 
 // ! ternary examples
@@ -50,13 +101,13 @@
 //   hasDriversLicense && hasGoodVision
 //     ? !isHandicapped
 //       ? 'can drive'
-//       : !usingRegularCar
+//       : !usingRegularCar  
 //       ? 'can drive'
 //       : 'cannot drive'
 //     : 'cannot drive';
 // console.log(result);
 
-console.log('----------\nswitch case statements\n----------');
+// console.log('----------\nswitch case statements\n----------');
 
 let text;
 // let fruit = prompt('type your favorite fruit');
