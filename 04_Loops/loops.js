@@ -63,7 +63,12 @@ console.log("Toplam:", toplam); */
 
 // //******************** WHILE ******************
 
-
+let i = 1;
+while (i <= 5) {
+    console.log(`${i}-Merhaba`);
+    i++;
+}
+console.log("Bitti")
 
 // //* Ornek
 
