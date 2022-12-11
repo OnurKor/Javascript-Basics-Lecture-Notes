@@ -136,9 +136,9 @@
 
 // console.log('----------\nswitch case statements\n----------');
 
-let text;
+// let text;
 // let fruit = prompt('type your favorite fruit');
-// banana, lime, limon, orange, apple, default
+// // banana, lime, limon, orange, apple, default
 
 // switch (fruit.toLowerCase()) {
 //   case 'banana':
@@ -166,13 +166,61 @@ let text;
 // pazar self study
 // default yanlış gün girildi.
 
+// const day = prompt('enter a day: ').toLowerCase();
 
-// ! example 5
+// switch (day) {
+//   case 'monday':
+//   case 'tuesday':
+//   case 'wednesday':
+//   case 'thursday':
+//     console.log(`Inclass`);
+//     break;
+//   case 'friday':
+//     console.log(`Teamwork`);
+//     break;
+//   case 'saturday':
+//     console.log(`Inclass and workshop`);
+//     break;
+//   case 'sunday':
+//     console.log(`Self study.`);
+//     break;
+//   default:
+//     console.log(`${day} is not a day.`);
+// };
+
+// ! example 6
 // output day count of a month of given year 2020 02 => 29
 // 2022 02 => 28
-
 //? leap year
 
+// let year = 2020;
+// let month = 1;
+// let dayCount;
+// switch (month) {
+//   case 1:
+//   case 3:
+//   case 5:
+//   case 7:
+//   case 8:
+//   case 10:
+//   case 12:
+//     dayCount = 31;
+//     break;
+//   case 4:
+//   case 6:
+//   case 9:
+//   case 11:
+//     dayCount = 30;
+//     break;
+//   case 2:
+//     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) dayCount = 29;
+//     else dayCount = 28;
+//     break;
+//   default:
+//     dayCount = -1; // invalid month
+// }
+
+// console.log(dayCount); // 29
 
 // ! example-6 path selection
 
@@ -181,6 +229,16 @@ path = "ad", "fs", "ds" // ad => aws-devops , fs u know, ds => data-science
 pathInfo = ""; // provide some information about the selected path.
 */
 
-// const pathSelected = prompt(
-//   'Which path would you like to attend?\nad -> aws-devops\nfs -> full-stack\nds -> data-science'
-// );
+const pathSelected = prompt(
+  'Which path would you like to attend?\nad -> aws-devops\nfs -> full-stack\nds -> data-science'
+);
+
+if (pathSelected == "fs") {
+  console.log("A Full Stack Developer is someone who works with the Back End — or server side — of the application as well as the Front End, or client side.");
+} else if (pathSelected == "ds") {
+  console.log("A data scientist is someone who creates programming code and combines it with statistical knowledge to create insights from data.");
+} else if (pathSelected == "ad"){
+  console.log("AWS provides services that help you practice DevOps at your company and that are built first for use with AWS. These tools automate manual tasks, help teams manage complex environments at scale, and keep engineers in control of the high velocity that is enabled by DevOps.");
+} else {
+  console.log("Please enter a valid path.")
+};
