@@ -73,12 +73,13 @@ console.log("Toplam:", toplam); */
 // //* Ornek
 
 // //******************** DO-WHILE ******************
-// let sayac = 1;
+let sayac = 1;
 
-// do {
-//   console.log('Merhaba-', sayac);
-//   sayac++;
-// } while (sayac <= 5);
+do {
+  console.log('Merhaba-', sayac);
+  sayac++;
+} while (sayac <= 5);
+
 
 // let not2;
 
