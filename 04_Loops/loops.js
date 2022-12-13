@@ -1,4 +1,4 @@
-console.log('****** LOOPS *******');
+console.log("****** LOOPS *******");
 
 // * =======================================================
 // *                     DÖNGÜLER
@@ -60,7 +60,6 @@ console.log("Toplam:", toplam); */
 //     console.log("The number is not a prime number.");
 // };
 
-
 // //******************** WHILE ******************
 
 // let i = 1;
@@ -71,33 +70,57 @@ console.log("Toplam:", toplam); */
 // console.log("Bitti")
 
 // //* Ornek
+// let not = +prompt("Lütfen notunuzu giriniz (0-100):");
+
+// while (not < 0 || not > 100) {
+//   console.log("Girdiğiniz not 0-100 arasında olmalıdır.");
+//   not = +prompt("Lütfen notunuzu giriniz (0-100):");
+// }
+// console.log("Girdiğiniz not:", not);
 
 // //******************** DO-WHILE ******************
-let sayac = 1;
+/* let sayac = 1;
 
 do {
   console.log('Merhaba-', sayac);
   sayac++;
-} while (sayac <= 5);
-
+} while (sayac <= 5); */
 
 // let not2;
 
 // do {
-//   not2 = prompt('Lütfen notunuzu giriniz (0-100):');
+//   not2 = +prompt("Lütfen notunuzu giriniz (0-100):");
 //   if (not2 < 0 || not2 > 100) {
-//     alert('Girdiğiniz not 0-100 arasında olmalıdır');
+//     alert("Girdiğiniz not 0-100 arasında olmalıdır");
 //   }
 // } while (not2 < 0 || not2 > 100);
 
-// console.log('Girdiğiniz not', not2);
+// console.log("Girdiğiniz not", not2);
 
 // //? ODEV1: klavyeden Q karakteri girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
 
 // let not3;
 
-// while (not3 != 'q') {
-//   not3 = prompt('Lütfen not giriniz veya Q ya basarak çıkınız!').toLowerCase();
+// while (not3 != "q") {
+//   not3 = prompt("Lütfen not giriniz veya Q ya basarak çıkınız!").toLowerCase();
+//   if (not3 < 0 || not3 > 100) {
+//     console.log("Girdiğiniz not 0-100 arasında olmalıdır");
+//   } else {
+//     console.log("Girdiğiniz not", not3);
+//   }
 // }
 
-// console.log('Q ya basarak çıkış yaptınız !!!');
+// console.log("Q ya basarak çıkış yaptınız !!!");
+
+let not3;
+
+do {
+  not3 = prompt("Lütfen not giriniz veya Q ya basarak çıkınız!").toLowerCase();
+  if (not3 < 0 || not3 > 100) {
+    console.log("Girdiğiniz not 0-100 arasında olmalıdır");
+  } else {
+    console.log("Girdiğiniz not", not3);
+  }
+} while (not3 != "q");
+
+console.log("Q ya basarak çıkış yaptınız !!!");
