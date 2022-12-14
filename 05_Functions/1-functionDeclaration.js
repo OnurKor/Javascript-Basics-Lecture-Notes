@@ -50,9 +50,9 @@ console.log(mesaj1); */
 //* Örnek4: Parametreli, Dönüş değerli
 //**********************************************************/
 
-function tekCift (number){
- return number % 2 === 0 ? `${number} çifttir.` : `${number} tektir.`
-};
+// function tekCift (number){
+//  return number % 2 === 0 ? `${number} çifttir.` : `${number} tektir.`
+// };
 
-console.log(tekCift(5));
-console.log(tekCift(2));
+// console.log(tekCift(5));
+// console.log(tekCift(2));
