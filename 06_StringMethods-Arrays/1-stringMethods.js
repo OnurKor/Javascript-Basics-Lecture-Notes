@@ -6,9 +6,20 @@
 console.log('******* STRING METHODS ********');
 
 //! Klasik yöntem ile string tanımlanırsa bu string bir primitive değişkendir.
+const str1 = "Onur";
+const str2 = "Kordoğan";
+const str3 = "Frontend";
 
+console.log(typeof str1);
+const str4 = str1 + str2; //*String concat
+console.log(str4);
+
+console.log(str4.concat(str3)); 
 
 //! Non-primitive String tanımlama
+
+const str5 = new String("Non-primitive String");
+console.log(str5, typeof str5);
 
 //* Normalde primitive veri tiplerinin property veya metodu olmaz.
 //* Ancak,Javascript otomatik olarak primitive String'ler için object wrapper oluşturur.
@@ -21,6 +32,8 @@ console.log('******* STRING METHODS ********');
 //* ----------------------------------------------------------
 //*  concat() - immutable
 //* ----------------------------------------------------------
+
+
 
 
 //* ----------------------------------------------------------
@@ -46,7 +59,7 @@ console.log('******* STRING METHODS ********');
 //* ----------------------------------------------------------
 //*  replace(searchFor, replaceWith) --immutable
 //* ----------------------------------------------------------
-;
+
 
 //* Detaylı değiştirme alternatifleri için regex kullanılabilir.
 
@@ -71,4 +84,3 @@ console.log('******* STRING METHODS ********');
 //* ----------------------------------------------------------
 //* trim();
 //* ----------------------------------------------------------
-
