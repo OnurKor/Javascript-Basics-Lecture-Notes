@@ -128,6 +128,10 @@ console.log(copyTarkan); //! stringi array haline getirdi
 // https://www.youtube.com/watch?v=b7vfp5G4brE
 // https://youtu.be/b7vfp5G4brE
 
+const uzunLink = 'https://www.youtube.com/watch?v=b7vfp5G4brE';
+const link = "https://youtu.be/";
+const kısaLink = link + uzunLink.slice(32);
+console.log(kısaLink);
 //* ----------------------------------------------------------
 //* trim();
 //* ----------------------------------------------------------
