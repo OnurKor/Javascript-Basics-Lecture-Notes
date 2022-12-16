@@ -48,7 +48,7 @@ console.log(s3.charAt(4)); //! o 4. indexte bulunan char'ı getir'
 console.log(s3.charAt(s3.length - 1)); //! d sonuncu indexte bulunan char'ı getir'
 
 //* ----------------------------------------------------------
-//* includes() - case sentive - true/false döndürür
+//* includes() - case sensitive - true/false döndürür
 //* ----------------------------------------------------------
 const word = "To be or not to be, that is the question";
 console.log(word.includes("to be")); //! true
@@ -63,11 +63,11 @@ console.log(word.includes("to be", 14)); //! false
 const tobeIndex = word.indexOf("or");
 console.log(tobeIndex); //! 6 şu değere sahip olan indexi ver.
 console.log(word.indexOf("be")); //! 3 ilk gördüğü indexi döndürür.
-console.log(word.lastIndexOf("be")); //! 16 son indexten gelere ilk gördüğü indexi döndürür.
+console.log(word.lastIndexOf("be")); //! 16 son indexten gelerek ilk gördüğü indexi döndürür.
 console.log(word.lastIndexOf("BE")); //! eğer yoksa -1 döndürür ve -1 index aslında yok demektir.
 
 //* ----------------------------------------------------------
-//* startsWidth() , endsWith() - case sensitive
+//* startsWith() , endsWith() - case sensitive
 //* ----------------------------------------------------------
 const word2 = "Salına salına sinsice !";
 console.log(word2.startsWith("sa")); //! false baştan bakıyor.
