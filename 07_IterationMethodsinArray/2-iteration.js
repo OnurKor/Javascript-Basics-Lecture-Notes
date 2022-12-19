@@ -45,13 +45,17 @@ fiyatlar.forEach((deger,indis,dizi) => {
 console.log(fiyatlar);
 
 
-
 //*-------------- ÖDEV -------------------
 //* fiyatlar dizisinde her bir fiyata %10 zam yapalım.
+
+
 
 //* ======================================================
 //*                       MAP METHOD
 //* ======================================================
+
+
+
 
 //*-------------- ÖRNEK -------------------
 //* isimler dizisin içerisindeki her ismi büyük harf olarak
