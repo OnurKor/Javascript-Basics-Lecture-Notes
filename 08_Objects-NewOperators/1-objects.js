@@ -136,55 +136,68 @@ console.log(kisilerObject.ahmet.is);
 
 //? JSON => javascript Object Notation
 const kisiler = [
-    {
-      name: 'Ahmet',
-      surname: 'Can',
-      job: 'developer',
-      age: 30,
-    },
-    {
-      name: 'Mehmet',
-      surname: 'Baki',
-      job: 'tester',
-      age: 35,
-    },
-    {
-      name: 'Nur',
-      surname: 'Ersan',
-      job: 'team lead',
-      age: 40,
-    },
-    {
-      name: 'Merve',
-      surname: 'Veli',
-      job: 'developer',
-      age: 26,
-    },
-  
-    {
-      name: 'Ruzgar',
-      surname: 'Kuzey',
-      job: 'tester',
-      age: 24,
-    },
-  ];
-  console.log(kisiler);
-  console.log(kisiler[4]); //?{name: 'Ruzgar', surname: 'Kuzey', job: 'tester', age: 24}
+  {
+    name: "Ahmet",
+    surname: "Can",
+    job: "developer",
+    age: 30,
+  },
+  {
+    name: "Mehmet",
+    surname: "Baki",
+    job: "tester",
+    age: 35,
+  },
+  {
+    name: "Nur",
+    surname: "Ersan",
+    job: "team lead",
+    age: 40,
+  },
+  {
+    name: "Merve",
+    surname: "Veli",
+    job: "developer",
+    age: 26,
+  },
 
+  {
+    name: "Ruzgar",
+    surname: "Kuzey",
+    job: "tester",
+    age: 24,
+  },
+];
+console.log(kisiler);
+console.log(kisiler[4]); //?{name: 'Ruzgar', surname: 'Kuzey', job: 'tester', age: 24}
 
 //* Ornek1: kisiler dizisindeki job'lari tek tek yazdiriniz.
 kisiler.forEach((kisi) => console.log(kisi.job));
 
 //* Ornek2: yaslari bir artirarak yeni bir diziye saklayiniz.
-const yaslar = kisiler.map((kisi) => kisi.age + 1 );
+const yaslar = kisiler.map((kisi) => kisi.age + 1);
 console.log(yaslar);
 
 //* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
 //* bunu name key'i olarak saklayan, aynı zamanda age degerlerini 5
 //* arttırarak age key'ine saklayan ve oluşan diziyi döndüren kodu yazınız.
 
+const kisilerFullIsim = kisiler.map((kisi) => ({
+  fullname: kisi.name.toUpperCase() + " " + kisi.surname.toUpperCase(),
+  age: kisi.age + 5,
+}));
 
 //? Alternatif syntax
+
+const kisilerFullIsim2 = kisiler.map((kisi) => {
+  return {
+    fullname: kisi.name.toUpperCase() + " " + kisi.surname.toUpperCase(),
+    age: kisi.age + 5,
+  };
+});
+
+console.log(kisilerFullIsim);
+console.log(kisilerFullIsim2); //? Alternatif syntax
 
 //* Ornek4: Yasi(age) 33 den kücük olan kisilerin adlarini (name) listeyiniz.
 
@@ -194,3 +207,7 @@ console.log(yaslar);
 //* yeni diziye saklayiniz.
 
 //* Ornek7: kisilerin ortalama yasini hesaplayiniz.
+
+const ortYas = kisiler.reduce((top, kisi) => top + kisi.age, 0) / kisiler.length; 
+//! top'a başlangıç değeri(0) vermezsek yanlış cevap alıyoruz.
+console.log("ORT YAS:", ortYas);
