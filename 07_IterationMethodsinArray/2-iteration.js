@@ -125,19 +125,49 @@ console.log(kucuk250);
 //* fiyatlar dizisindeki fiyatı 90'dan büyük olan değerleri
 //* konsola tek tek bastırınız.
 
+fiyatlar.filter((buyuk) => buyuk > 90).forEach((x) => console.log(x));
+
 //* fiyatlar dizisindeki fiyatı 110'dan küçük olan değerlere
 //*  %10 artış yapın ve bu değerleri konsola tek tek bastırınız.
+
+fiyatlar
+  .filter((f) => f < 110)
+  .map((a) => a * 1.1)
+  .forEach((zamlı) => console.log(zamlı));
 
 //* maaslar 4000'den düsük olanlara %50 zam yapmak istiyoruz
 //* ve bunu ayri dizi olarak saklamak istiyoruz.
 const maaslar = [3000, 5000, 4000, 6000, 6500];
+console.log(maaslar);
+
+const zam50 = maaslar
+  .filter((kucuk4000) => kucuk4000 < 4000)
+  .map((zam) => zam * 1.5);
+console.log(zam50);
 
 //* Maasi 4000 'den büyük olanlara %25 zam yaparak sonuçlari yazdiralim.
+const zam25 = maaslar
+  .filter((maas) => maas > 4000)
+  .map((zam) => zam * 1.25)
+  .forEach((zamlımaas) => console.log(zamlımaas));
+
+//* maas toplamini forEach() ile bulunuz. 
+let topMaas = 0;
+maaslar.forEach((toplam) => topMaas += toplam);
+console.log(topMaas);
 
 //* ======================================================
 //*                       REDUCE METHOD
 //* ======================================================
 
-//* maas toplamini bulunuz.
+//* maas toplamini reduce() ile bulunuz. 
+
+const toplamMaas = maaslar.reduce((toplam, maas) => toplam + maas, 0);
+console.log("Toplam Maas:", toplamMaas); //! toplama yaptıgımız için toplam parametresine ilk 0 değerini atadık bu nedenle ,0 yaptık.
 
 //* maasi ortalamanin altinda olanlara %20 zam yapalim.
+const ortMaas = (toplamMaas / maaslar.length);
+console.log(ortMaas);
+
+const zam20 = maaslar.filter((maas) => maas < ortMaas).map((zam) => zam * 1.2);
+console.log(zam20);
