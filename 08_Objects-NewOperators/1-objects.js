@@ -47,14 +47,59 @@ console.log(ahmet.perAdi);
 
 console.log(this); //! window objesine bağlanmıştır çünkü global scope'ta this yapılmıştır.
 
-
 //* ---------------------------------------------------------
 //* 3- Object literal (En çok tercih edilen yöntem)
 //* ---------------------------------------------------------
 
+const calisan = {
+  ad: "Ahmet",
+  soyad: "Yilmaz",
+  yas: 30,
+  is: "devepoler",
+  diller: ["C", "C++", "Python", "JS"],
+  maas: 120000,
+};
+
+console.log(calisan);
+console.log(calisan.yas);
+console.log(calisan.diller);
+console.log(calisan.diller[3]);
+console.log(calisan[1]); //! undefined döndürür çünkü object elemanlarına indisleme ile erişemeyiz.
+
+calisan.konum = "Turkey";
+calisan.email = "ahmet@gmail.com";
+calisan["dogum"] = 1990;
+console.log(calisan);  //! heapte bulunan yerine yeni bir property ekledik.
+
+const isci = calisan;  //! referans aktarımı(yani adres aktarımı) ikisi de aynı bellek adresini gösteriyor. sığ kopyalama denir.
+isci.maas = 50000;
+console.log(isci, calisan); //! ikisi birden değişti yani. mantıklı bir kopyalama yöntemi değil.
+
 //* ======================================================
 //*              Object Metotları
 //* ======================================================
+
+const kisi = {
+    ad: "Can",
+    soyad: "Canan",
+    dogum: 1990,
+    meslek: "developer",
+    ehliyet: true,
+    yasHesapla: function() {
+        return new Date().getFullYear() - this.dogum;
+    },
+    ozet: function(){
+        return `${this.ad}, ${this.yasHesapla()} yaşındadır.`;
+    },
+   /*  ozet: () => {
+        console.log(this);
+        return `${this.ad}, ${this.yasHesapla()} yaşındadır.`;
+    }, */
+};
+
+console.log("Yas: ", kisi.yasHesapla());
+console.log("Bilgi:", kisi.ozet());
+
 
 //! NOT: arrow fonksiyonları farklı amaç için geliştirilmiş fonksiyonlarıdır
 //! ve lexical context'e sahiptirler. Dolayısıyla, bir arrow fonk. içerisinde
