@@ -108,8 +108,8 @@ isimler
 isimler
   .filter((x) => x === "ahmet")
   .map((x) => x.toLocaleUpperCase())
-  .forEach((x) => console.log(x)); 
-  //! forEach() yaptığımız için değeri döndüyor.
+  .forEach((x) => console.log(x));
+//! forEach() yaptığımız için değeri döndüyor.
 
 const deneme = isimler
   .filter((x) => x === "ahmet")
@@ -130,7 +130,7 @@ console.log(kucuk250);
 
 //* maaslar 4000'den düsük olanlara %50 zam yapmak istiyoruz
 //* ve bunu ayri dizi olarak saklamak istiyoruz.
-const maaslar = [3000, 5000, 4000, 6000, 6500]
+const maaslar = [3000, 5000, 4000, 6000, 6500];
 
 //* Maasi 4000 'den büyük olanlara %25 zam yaparak sonuçlari yazdiralim.
 
