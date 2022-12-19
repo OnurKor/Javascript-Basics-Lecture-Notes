@@ -119,5 +119,5 @@ const ogrenciBulForOf = function (isim) {
   // return sayac ? `${isim}, ${sayac} adet bulundu` : `${isim} bulunamadi`;
 };
 
-let ogrName = prompt("Öğrenci adını giriniz:").toLocaleLowerCase();
-console.log(ogrenciBulForOf(ogrName));
+// let ogrName = prompt("Öğrenci adını giriniz:").toLocaleLowerCase();
+// console.log(ogrenciBulForOf(ogrName));
