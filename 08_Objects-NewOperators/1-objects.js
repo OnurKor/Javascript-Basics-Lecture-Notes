@@ -69,9 +69,9 @@ console.log(calisan[1]); //! undefined döndürür çünkü object elemanlarına
 calisan.konum = "Turkey";
 calisan.email = "ahmet@gmail.com";
 calisan["dogum"] = 1990;
-console.log(calisan);  //! heapte bulunan yerine yeni bir property ekledik.
+console.log(calisan); //! heapte bulunan yerine yeni bir property ekledik.
 
-const isci = calisan;  //! referans aktarımı(yani adres aktarımı) ikisi de aynı bellek adresini gösteriyor. sığ kopyalama denir.
+const isci = calisan; //! referans aktarımı(yani adres aktarımı) ikisi de aynı bellek adresini gösteriyor. sığ kopyalama denir.
 isci.maas = 50000;
 console.log(isci, calisan); //! ikisi birden değişti yani. mantıklı bir kopyalama yöntemi değil.
 
@@ -80,18 +80,18 @@ console.log(isci, calisan); //! ikisi birden değişti yani. mantıklı bir kopy
 //* ======================================================
 
 const kisi = {
-    ad: "Can",
-    soyad: "Canan",
-    dogum: 1990,
-    meslek: "developer",
-    ehliyet: true,
-    yasHesapla: function() {
-        return new Date().getFullYear() - this.dogum;
-    },
-    ozet: function(){
-        return `${this.ad}, ${this.yasHesapla()} yaşındadır.`;
-    },
-   /*  ozet: () => {
+  ad: "Can",
+  soyad: "Canan",
+  dogum: 1990,
+  meslek: "developer",
+  ehliyet: true,
+  yasHesapla: function () {
+    return new Date().getFullYear() - this.dogum;
+  },
+  ozet: function () {
+    return `${this.ad}, ${this.yasHesapla()} yaşındadır.`;
+  },
+  /*  ozet: () => {
         console.log(this);
         return `${this.ad}, ${this.yasHesapla()} yaşındadır.`;
     }, */
@@ -99,7 +99,6 @@ const kisi = {
 
 console.log("Yas: ", kisi.yasHesapla());
 console.log("Bilgi:", kisi.ozet());
-
 
 //! NOT: arrow fonksiyonları farklı amaç için geliştirilmiş fonksiyonlarıdır
 //! ve lexical context'e sahiptirler. Dolayısıyla, bir arrow fonk. içerisinde
@@ -112,18 +111,78 @@ console.log("Bilgi:", kisi.ozet());
 // * ======================================================
 
 //? Nested objects
+const kisilerObject = {
+  ahmet: {
+    ad: "Ahmet",
+    soyad: "Yilmaz",
+    yas: 30,
+    is: "devepoler",
+    diller: ["C", "C++", "Python", "JS"],
+    maas: 120000,
+  },
+  mehmet: {
+    ad: "Mehmet",
+    soyad: "Yilmaz",
+    yas: 24,
+    is: "devepoler",
+    diller: ["C", "C++", "Python", "JS"],
+    maas: 200000,
+  },
+};
+console.log(kisilerObject);
+
+console.log(kisilerObject.ahmet);
+console.log(kisilerObject.ahmet.is);
 
 //? JSON => javascript Object Notation
+const kisiler = [
+    {
+      name: 'Ahmet',
+      surname: 'Can',
+      job: 'developer',
+      age: 30,
+    },
+    {
+      name: 'Mehmet',
+      surname: 'Baki',
+      job: 'tester',
+      age: 35,
+    },
+    {
+      name: 'Nur',
+      surname: 'Ersan',
+      job: 'team lead',
+      age: 40,
+    },
+    {
+      name: 'Merve',
+      surname: 'Veli',
+      job: 'developer',
+      age: 26,
+    },
+  
+    {
+      name: 'Ruzgar',
+      surname: 'Kuzey',
+      job: 'tester',
+      age: 24,
+    },
+  ];
+  console.log(kisiler);
+  console.log(kisiler[4]); //?{name: 'Ruzgar', surname: 'Kuzey', job: 'tester', age: 24}
 
-//?{name: 'Ruzgar', surname: 'Kuzey', job: 'tester', age: 24}
 
 //* Ornek1: kisiler dizisindeki job'lari tek tek yazdiriniz.
+kisiler.forEach((kisi) => console.log(kisi.job));
 
 //* Ornek2: yaslari bir artirarak yeni bir diziye saklayiniz.
+const yaslar = kisiler.map((kisi) => kisi.age + 1 );
+console.log(yaslar);
 
 //* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
 //* bunu name key'i olarak saklayan, aynı zamanda age degerlerini 5
 //* arttırarak age key'ine saklayan ve oluşan diziyi döndüren kodu yazınız.
+
 
 //? Alternatif syntax
 
