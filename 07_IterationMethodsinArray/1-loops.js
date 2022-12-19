@@ -87,7 +87,7 @@ console.log(ogrenciBul(ogrIsim));
 //* kapsayacak sekilde guncellenmis halidir. Bu dongude dizi
 //* icersindeki veriye erisirken indisleme kullanmaya gerek yoktur.
 
-const ogrenciBulForOf = function (isim) {
+/* const ogrenciBulForOf = function (isim) {
   let sayac = 0;
   for (let ogrenci of ogrenciler) {
     if (ogrenci === isim) {
@@ -100,6 +100,23 @@ const ogrenciBulForOf = function (isim) {
   } else {
     return `${isim}, ${sayac} adet bulundu`;
   }
+};
+
+let ogrName = prompt("Öğrenci adını giriniz:").toLocaleLowerCase();
+console.log(ogrenciBulForOf(ogrName)); */
+
+const ogrenciBulForOf = function (isim) {
+  let sayac = 0;
+  for (let ogrenci of ogrenciler) {
+    ogrenci === isim ? sayac++ : null; //! Ternary
+    //   ogrenci === isim && sayac++;
+    //! Short- circuit yöntemi: && => koşul doğru ise ifadeyi çalıştır
+    //   ogrenci === isim || sayac--;
+    //! Short- circuit yöntemi: || => koşul yanlış ise ifadeyi çalıştır
+  }
+
+  return !sayac ? `${isim} bulunamadı` : `${isim}, ${sayac} adet bulundu`;
+  // return sayac ? `${isim}, ${sayac} adet bulundu` : `${isim} bulunamadi`;
 };
 
 let ogrName = prompt("Öğrenci adını giriniz:").toLocaleLowerCase();
