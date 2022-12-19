@@ -44,7 +44,9 @@ const canan = new Personel(102, "Canan", 85000);
 console.log(ahmet, canan);
 console.log(canan.perMaas);
 console.log(ahmet.perAdi);
-console.log(this); //! window objesine bağlanmıştır
+
+console.log(this); //! window objesine bağlanmıştır çünkü global scope'ta this yapılmıştır.
+
 
 //* ---------------------------------------------------------
 //* 3- Object literal (En çok tercih edilen yöntem)
