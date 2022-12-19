@@ -5,7 +5,7 @@
 console.log("****** ITERATION **********");
 //*Dizideki herbir fiyati konsola bastiriniz.
 
-const fiyatlar = [100, 200, 50, 89];
+const fiyatlar = [100, 250, 50, 89];
 
 //*Dizideki herbir fiyati konsola bastiriniz.
 
@@ -70,44 +70,56 @@ console.log(kucukIsimler);
 
 console.log(isimler); //! Orjinalini değiştirmez.
 
-
 //* tlFiyatlar dizisindeki fiyatların dolar ve euro karşılığını yeni dizi olarak yazdırınız.
 const euro = 19.68;
 const dolar = 18.1;
-const tlFiyatlar = [100,150,1000,50,80];
+const tlFiyatlar = [100, 150, 1000, 50, 80];
 
 const dolarFiyatı = tlFiyatlar.map((tl) => (tl / dolar).toFixed(3));
 console.log(dolarFiyatı);
 const euroFiyatı = tlFiyatlar.map((tl) => (tl / euro).toFixed(3));
 console.log(euroFiyatı);
 
-
-//* ----------------  öRNEK  ----------------- 
+//* ----------------  öRNEK  -----------------
 
 const yeniDizi = isimler.map((isim, i, dizi) => {
-    dizi[i] = isim.toLocaleLowerCase();  //! Orjinal diziyi değiştirdik
-    return dizi[i];
+  dizi[i] = isim.toLocaleLowerCase(); //! Orjinal diziyi değiştirdik
+  return dizi[i];
 });
 console.log(yeniDizi);
-
+console.log(isimler); //! Orjinal dizi değişti.
 
 //* ======================================================
 //*    CHAINING (PIPELINE) -- ZİNCİRLEME(BORU HATTI)
 //* ======================================================
 //! Tüm isimleri büyük harfe çevirip konsolda yazdiriniz.
 
-//* map() metodundan sonra eğer forEach gibi bir terminal(consumer) işlemi
-//* kullanılırsa yazılan ifade bir dizi döndürmemiş olur.
+isimler
+  .map((isim) => isim.toLocaleUpperCase())
+  .forEach((name) => console.log(name));
 
-
+//* map() metodundan sonra eğer forEach gibi bir terminal(consumer) işlemi kullanılırsa yazılan ifade bir dizi döndürmemiş olur.(yani tüketir) ve forEach()'ten sonra yeni bir method gelmez.
 
 //* ======================================================
 //*                       FILTER METHOD
 //* ======================================================
 
 //! Ahmet olanları seçip büyük harfe çevirip konsolda yazdiriniz.
+isimler
+  .filter((x) => x === "ahmet")
+  .map((x) => x.toLocaleUpperCase())
+  .forEach((x) => console.log(x)); 
+  //! forEach() yaptığımız için değeri döndüyor.
+
+const deneme = isimler
+  .filter((x) => x === "ahmet")
+  .map((x) => x.toLocaleUpperCase());
+console.log(deneme); //! dizi döndürüyor.
 
 //* fiyatlar array'inde fiyatı 250 TL den az olanlari ayri bir diziye saklayalim.
+
+const kucuk250 = fiyatlar.filter((f) => f < 250);
+console.log(kucuk250);
 
 //*-------------- ÖDEV -------------------
 //* fiyatlar dizisindeki fiyatı 90'dan büyük olan değerleri
@@ -118,6 +130,7 @@ console.log(yeniDizi);
 
 //* maaslar 4000'den düsük olanlara %50 zam yapmak istiyoruz
 //* ve bunu ayri dizi olarak saklamak istiyoruz.
+const maaslar = [3000, 5000, 4000, 6000, 6500]
 
 //* Maasi 4000 'den büyük olanlara %25 zam yaparak sonuçlari yazdiralim.
 
