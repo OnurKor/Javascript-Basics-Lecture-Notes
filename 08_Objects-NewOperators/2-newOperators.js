@@ -146,3 +146,24 @@ console.log(hespiniTopla(1, 2, 3, 4, 5, 6));
 //? ------------------------------------------------------
 //?  SPREAD
 //? ------------------------------------------------------
+
+const araclar = ['Ucak', 'Helikopter', 'Bisiklet'];
+const otomobiller = ['Tır', 'Otobus', 'Araba', 'SUV'];
+
+const tumAraclar = [...araclar, ...otomobiller];
+console.log(tumAraclar);
+
+//* Example
+const meyveler = ['cherry', 'pear', 'apricot', 'raisin'];
+const turunclar = ['mandalina', ...meyveler, 'lime', 'orange'];
+console.log(turunclar);
+
+//* Ornek (String spread)
+let str = 'Hello FS';
+console.log([...str]);
+console.log(Array.from(str));
+
+//* Ornek (max)
+console.log(Math.max(1, 3, 9, 5));
+const rakamlar = [1, 3, 9, 5];
+console.log('MAX:', Math.max(...rakamlar));
