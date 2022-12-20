@@ -201,13 +201,15 @@ console.log(kisilerFullIsim2); //? Alternatif syntax
 
 //* Ornek4: Yasi(age) 33 den kücük olan kisilerin adlarini (name) listeyiniz.
 
+const kucuk33 = kisiler.filter((kisi) => console.log(kisi.age < 33))
+
 //* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
 
 //* Ornek7: kisilerin ortalama yasini hesaplayiniz.
-
+ 
 const ortYas = kisiler.reduce((top, kisi) => top + kisi.age, 0) / kisiler.length; 
 //! top'a başlangıç değeri(0) vermezsek yanlış cevap alıyoruz.
 console.log("ORT YAS:", ortYas);
