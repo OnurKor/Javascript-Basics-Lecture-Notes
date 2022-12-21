@@ -201,9 +201,11 @@ console.log(kisilerFullIsim2); //? Alternatif syntax
 
 //* Ornek4: Yasi(age) 33 den kücük olan kisilerin adlarini (name) listeyiniz.
 
-const kucuk33 = kisiler.filter((kisi) => console.log(kisi.age < 33))
+kisiler.filter((kisi) => kisi.age < 33).forEach((kisi) => console.log(kisi.name));
 
 //* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
+
+// const kucuk33 = 
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
