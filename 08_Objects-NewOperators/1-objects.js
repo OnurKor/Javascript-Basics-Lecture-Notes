@@ -201,7 +201,9 @@ console.log(kisilerFullIsim2); //? Alternatif syntax
 
 //* Ornek4: Yasi(age) 33 den kücük olan kisilerin adlarini (name) listeyiniz.
 
-kisiler.filter((kisi) => kisi.age < 33).forEach((kisi) => console.log(kisi.name));
+kisiler
+  .filter((kisi) => kisi.age < 33)
+  .forEach((kisi) => console.log(kisi.name));
 
 //* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
 
@@ -210,9 +212,16 @@ console.log(kucuk33);
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
+const developers = kisiler
+  .filter((k) => k.job === "developer")
+  .map((k) => {
+    return { devName: k.name, devAge: k.age };
+  });
+  console.log(developers);
 
 //* Ornek7: kisilerin ortalama yasini hesaplayiniz.
- 
-const ortYas = kisiler.reduce((top, kisi) => top + kisi.age, 0) / kisiler.length; 
+
+const ortYas =
+  kisiler.reduce((top, kisi) => top + kisi.age, 0) / kisiler.length;
 //! top'a başlangıç değeri(0) vermezsek yanlış cevap alıyoruz.
 console.log("ORT YAS:", ortYas);
