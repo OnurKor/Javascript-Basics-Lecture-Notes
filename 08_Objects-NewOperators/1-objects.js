@@ -205,7 +205,8 @@ kisiler.filter((kisi) => kisi.age < 33).forEach((kisi) => console.log(kisi.name)
 
 //* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
 
-// const kucuk33 = 
+const kucuk33 = kisiler.filter((k) => k.age < 33).map((k) => k.name);
+console.log(kucuk33);
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
