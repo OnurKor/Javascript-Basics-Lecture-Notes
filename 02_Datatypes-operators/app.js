@@ -68,6 +68,7 @@
 // let p = `Merhaba ${userName}`;
 // console.log(p, typeof p);
 
+
 const myCar = {
   make : 'ford',
   model : 'Mustang',
