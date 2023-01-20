@@ -19,6 +19,7 @@ console.log("Program bitti"); */
 
 //? Ornek: 1 den n kadar sayıları toplayan kodu yazınız.
 
+
 /* const n = +prompt("n sayısını giriniz:");
 let toplam = 0;
 
