@@ -19,6 +19,7 @@
 //   }
 // };
 
+
 // const n = +prompt("n. terimi giriniz: ");
 
 // if (n <= 0) {
