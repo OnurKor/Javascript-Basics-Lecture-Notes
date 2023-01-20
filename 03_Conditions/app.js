@@ -233,6 +233,7 @@ const pathSelected = prompt(
   'Which path would you like to attend?\nad -> aws-devops\nfs -> full-stack\nds -> data-science'
 );
 
+
 if (pathSelected == "fs") {
   console.log("A Full Stack Developer is someone who works with the Back End — or server side — of the application as well as the Front End, or client side.");
 } else if (pathSelected == "ds") {
