@@ -71,6 +71,7 @@
 // };
 
 
+
 // ! ternary examples 3
 // console.log('----------\nternary if statements\n----------');
 
