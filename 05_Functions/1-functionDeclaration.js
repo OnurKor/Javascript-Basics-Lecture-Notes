@@ -6,6 +6,7 @@
 // ! 1.YÖNTEM  : FUNCTION DECLARATION
 // !-----------------------------------------------------------
 
+
 console.log("****** FUNC DECLARATION *********");
 
 
