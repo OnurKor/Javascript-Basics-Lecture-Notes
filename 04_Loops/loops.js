@@ -28,6 +28,7 @@ for(let i = 1; i <= n; i++){
     toplam += i;
 }
 
+
 console.log("Toplam:", toplam); */
 
 // //? ÖRNEK: Dışarıdan girilen sayının Asal olup olmadığını tespit ederek sonucu yazdıran programı yazınız.
