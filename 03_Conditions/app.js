@@ -6,6 +6,7 @@
 // console.log(n1, typeof n1);3
 
 
+
 // if(n1 > 0) {
 //   console.log(`${n1} is positive`);
 // } else console.log(`the number is either 0 or negative`);
