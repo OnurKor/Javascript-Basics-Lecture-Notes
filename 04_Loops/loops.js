@@ -4,6 +4,7 @@ console.log("****** LOOPS *******");
 // *                     DÖNGÜLER
 // * =======================================================
 
+
 //************************ FOR ****************************
 // Math.floor() =>aşağıya yuvarlar
 // Math.ceil() =>sürekli yukarıya yuvarlar
