@@ -14,6 +14,7 @@ console.log("****** FUNC DECLARATION *********");
 //****************************************************************/
 // yazdir(); //!invoke
 
+
 //! Declaration
 //! Paramatre almamış, bir şey döndürmek (void function)
 /* function yazdir() {
