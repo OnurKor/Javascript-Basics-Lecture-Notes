@@ -20,6 +20,7 @@ console.log("****** FUNC DECLARATION *********");
 /* function yazdir() {
   console.log("Merhaba");
 }
+
 yazdir(); //!invoke(Çağırmak)
 yazdir(); //!invoke
 
