@@ -23,6 +23,7 @@ console.log("****** FUNC DECLARATION *********");
 yazdir(); //!invoke(Çağırmak)
 yazdir(); //!invoke
 
+
 console.log(typeof yazdir) //* function */
 
 //* Örnek2: Parametreli Fonksiyon
