@@ -48,6 +48,7 @@ selamla("KORDOĞAN") */
   return mesaj;
 };
 
+
 mesaj1 = yasHesapla(2000, "İlayda");
 console.log(mesaj1); */
 
